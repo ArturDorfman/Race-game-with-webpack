@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Webpack training</title>
+<link href="./css/main.css" rel="stylesheet"></head>
+
+<body>
+	<div class="site-container">
+
+		<div id="game-registration">
+			<img class="background" src="./img/registration-bg.jpg" alt="background">
+			<div class="rules">
+				<p class="rules__title">Space race <br> The Game.</p>
+				<p class="rules__rules-info">You'll get 99 seconds for game.
+					In game you have star ship, collect coins and hearts, and fly away from space bugs. One coin gives you 5
+					points, extra hearts gives you 10 points. If you get collision with bug, it takes 1 life.
+					Good luck and have fun! </p>
+				<form class="registration" onsubmit="game.startGame(); return false">
+					<label for="name"> Your name:</label>
+					<input type="text" value="" name="name" id="registration-name" required>
+					<button type="submit" id="registration-button">Start the game!</button>
+				</form>
+			</div>
+		</div>
+
+		<div id="game">
+			<header class="header">
+				<div class="counters">
+					<div>
+						<span>Time: </span>
+						<span class="counters__time-counter" id="timer"></span>
+					</div>
+					<div>
+						<span>Lives: </span>
+						<span class="counters__live-counter"></span>
+					</div>
+					<div>
+						<span>Score: </span>
+						<span class="counters__score-counter"></span>
+					</div>
+				</div>
+			</header>
+
+			<div class="content">
+				<canvas id="playground" width="1920" height="300"></canvas>
+				<div style="display:none;">
+					<img id="bug" src="./img/bug.png">
+					<img id="coin" src="./img/coin.svg">
+					<img id="heart" src="./img/heart.svg">
+					<img id="spaceship" src="./img/spaceship.png">
+				</div>
+			</div>
+		</div>
+
+		<div id="game-result">
+			<img class="background" src="./img/result-bg.jpg" alt="background">
+			<div class="result">
+				<p class="result__title" id="result-username">Your name:</p>
+				<p class="result__item" id="result-score">Your score:</p>
+
+				<button class="result__button" type="button" id="restar-button" onclick="game.restartGame()">Restart it
+					now!</button>
+				<button class="result__button" type="submit" id="end-game">End game</button>
+			</div>
+		</div>
+
+<script src="./js/vendors-node_modules_focus-visible_dist_focus-visible_js-node_modules_html-loader_dist_runtim-b0975e.js"></script><script src="./js/main.js"></script></div></body>
+
+</html>
